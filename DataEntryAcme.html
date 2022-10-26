@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <h1 >ACME  GROCERS</h1>
+        <link rel="stylesheet" href="datastyle.css">
+        <!--<script type="text/css" src="acmestyle.css"></script>-->
+        <script src="ACME.JS">
+        </script> 
+        
+    </head>
+    <body>
+        <!-- <input type="text"  id="q">
+        <div id="out">
+        </div>
+        <input type="button" onclick="btnclk()"> -->
+        <form  id="l" class="B">
+            <form>  
+                <div class="part1">   
+                    <fieldset  class="p">
+                        <legend>Personal Information</legend>
+                        Full Name: <input type="text" id="name"> <br/>
+        
+                        Your Email: <input type="text" id="email">
+                    </fieldset>
+                </div>
+                <div class="part2" id="p2">
+                    <fieldset>
+                        <legend>Your Orders</legend>
+                        ProductCode: <input type="text" id="productCode"> <br/>
+                        No.Of Units: <input type="text" id="units"><br/>
+                        <!--<button type="submit">Add</button>-->
+                        <!-- <button type="button" id="b1" onclick="show()">Add</button>
+                        <button type="button" id="b1" onclick="showBill()"></button> -->
+                        <!-- <input type="button" onclick="searchProduct()" value="add"> -->
+                    </fieldset>
+                </div>
+                 
+            
+            </form>  
+        </form>
+        
+        <div class="B" align="left">
+                    
+            <fieldset>
+            <br>  
+            <input type="button" onclick="searchProduct()" value="add">
+             <button type="button" class="b1" id="b1" onclick="help()">Add</button>
+            <!-- <button type="button" class="b1" id="b1" onclick="show()">show</button> -->
+            <br>
+            <br>
+            <!-- <button type="button" class="b1"onclick="delNode()">Delete</button>
+            <br>
+            <br>
+            <button class="b1" type="submit" onclick="window.open ('Bill.html', 'name','width=600,height=400')">Generate Bill</button>    -->
+            <!--Forgot <a href="#"> password? </a>  --> 
+            </fieldset>
+        </div>  
+        <form class="d" id="d">
+
+            
+        </form>
+        <div align="right" class="a">
+            <div id="billSection">
+                <table id="billTable" rules="all" class="table">
+                    <thead>
+                        <tr style="background-color:black; color:white;border-right: none;">
+                            <td>&nbsp;SNo</td>
+                            <td>&nbsp;Product Code</td>
+                            <td>&nbsp;Product Name</td>
+                            <td>&nbsp;Price</td>
+                            <td>&nbsp;Taxes</td>
+                            <td>&nbsp;Units</td>
+                            <!-- <td>&nbsp;Total</td> -->
+                            <td>Total</td>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+    
+                    </tbody>
+                </table>
+            </div>
+            <script>
+
+            </script>
+
+</html>

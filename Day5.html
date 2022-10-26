@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <script>
+            //<!--
+                var newPara,newText;
+                function addNode(){
+                    newPara=document.createElement("p");
+                    newText=document.createTextNode("hello world");
+                    newPara.appendChild(newText);
+                    var bodyRef=document.getElementsByTagName("body");
+                    bodyRef[0].appendChild(newPara);
+
+                }
+                function delNode(){
+                    var bodyRef = document.getElementsByTagName("body");
+                    bodyRef[0].removeChild(newPara)
+                    var div1 =document.getElementById("div1");
+                    var para=document.getElementById("para1");
+                    div1.removeChild(para);
+                }
+                function addStyle(){
+                    var bodyRef =document.getElementsByTagName("body");
+                    bodyRef[0].style.backgroundColor="#AAABBC";
+                    newPara.style.display='none';
+                }
+                function show(){
+                    newPara.style.display='';
+                }
+
+                // function init(){
+                //     var button=document.getElementById("btn1");
+
+                //     button.addEventListener("click",addNode);
+                //     button.addEventListener("click",addStyle);
+                // }
+
+
+                //-->
+        </script>
+
+    </head>
+    <body>
+        <a href="http://www.google.com">Search</a>
+        <div id="div1">
+            <p id="para1"> frst para</p>
+        </div>
+        <form>
+            <input type="button" name="btn1" id="btn1" value="Add" onclick="addNode()"></input>
+            <input type="button" name="btn2" id="btn2" value="Delete" onclick="delNode()"></input>
+            <input  type="button" name="add" id="aad1" value="addstyle" onclick="addStyle()"></input>
+            <input  type="button" name="btn3" id="btn3" value="show" onclick="show()"></input>
+    </body>
+</html>

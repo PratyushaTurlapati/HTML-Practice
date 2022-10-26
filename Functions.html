@@ -1,0 +1,298 @@
+<html>
+    <head>
+        <title>
+            first html page
+        </title>
+        <meta name="description" content="">
+        <meta name="keywords" contents="">
+        <meta http_equiv="Refresh" content="20">
+        <script lang="Javascript">
+            //<!--
+            function greeting(){
+                var username="pratyu";
+                username=prompt("please enter name");
+                alert(username);
+                alert(50);
+                console.log(username);
+                
+            }
+            //greeting();
+            function myArray(){
+                    //var tmpArray =new Array();
+                    //tmpArray[0]="H";
+                    //tmpArray[1]="I";
+
+                    //alert(tmpArray.length);
+                    //alert(tmpArray.toString());
+                   alert(tmpArray.pop());
+                }
+                //myArray();
+            function dateDemo(){
+                var dt=new Date();
+                alert(dt.getDate());
+                alert(dt.getDay());
+                alert(dt.getFullYear());
+                alert(dt.getHours());
+                alert(dt.toLocaleTimeString());
+                alert(dt.toString());
+                var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+                var dayName = days[dt.getDay()];
+                alert(dayName);
+            }
+            //dateDemo();
+            function mathDemo(){
+                alert(Math.PI);
+                alert(Math.abs(-100));
+                alert(Math.ceil(10.44));
+
+                alert(Math.floor(10.44));
+
+                alert(Math.min(12,8,20));
+
+                alert(Math.max(12,8,20));
+
+                alert(Math.round(10.45));
+
+                alert(Math.random()*25);
+
+                alert(Math.sqrt(81));
+
+                alert(Math.pow(3,4));
+            }
+            //mathDemo();
+            function stringDemo(){
+                var myStr = new String("Hello World");
+
+                    alert(myStr.indexOf("e"));
+
+                    alert(myStr.charAt(0));
+
+                    alert(myStr.charCodeAt(0));
+
+                    alert(myStr.length);
+
+                    alert(myStr.substr(2));
+
+                    alert(myStr.toUppercase());
+
+                    alert(myStr.toLowercase());
+
+
+
+                    myStr = "Apples,Oranges,Grapes,Figs";
+
+                    var tmpArr =myStr.split(",");
+
+                    for(i=0;i<tmpArr.length;i++){
+
+                        alert(tmpArr[i])
+
+                    }
+
+                }//stringDemo()
+                var manager,executive;
+                function makeObject(){
+                    manager=new Object();
+                    manager.name="manager";
+                    manager.email="manager@ac.com";
+                    manager.getData = function(){}
+                    executive=new Object();
+                    executive.name="Executive";
+                    executive.email="exec@ac.com";
+
+
+                }
+                function getObjectData(){
+                    makeObject();
+                    alert(manager.name);
+                    alert(manager.email);
+                    alert(executive.name);
+                    alert(executive.email);
+                }
+                function filterLongWords(sarr,i){
+
+                for(j=0;j<sarr.length;j++){
+
+                if(sarr[j].length>i){
+
+                alert(sarr[j]);
+
+                }
+
+                }
+
+                }
+                function checkData(){
+                    var pattern=/cat/g;
+                    var regExp=new RegExp(pattern);
+                    var results
+
+                    var results=regExp.exec("Cats and dogs and cats again");
+                    if (results!=null){
+                        alert(results.length);
+                        alert(results);
+                        alert(regExp.lastIndex);
+                    }
+                    else{
+                        alert("no match!");
+                        
+                    }
+                }//checkData();
+
+                function myClass(){
+                    this.propertyTwo=2;
+                    this.propertyThree=3;
+                }
+
+                var myInstance=new myClass();
+                //alert(myInstance.propertyOne);
+                myClass.prototype.propertyOne=1;
+                myClass.prototype.propertyTwo=1;
+                //alert(myInstance.propertyOne);
+                //alert(myInstance.propertyTwo);
+
+                Date.prototype.getDayName = function(){
+
+                var arrDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday','Friday', 'Saturday','Sunday'];
+
+                return(arrDays[this.getDay()]);
+
+                }
+
+
+
+                //function init(){
+
+                //var dt = new Date();
+
+                //alert(dt.getDayName());
+
+                //}
+                
+function Vehicle(engine, wheels){
+this.hasEngine = engine || false;
+this.hasWheels = engine || false;
+
+}
+
+ function Car(make,model,hp){
+this.make = make;
+ this.model = model;
+this.hp = hp;
+}
+
+function displaySpecs(){
+alert(this.make+ " " + this.model + "" + this.hp + "" + this.hasEngine + "" +this.hasWheels);
+}
+function init(){
+Car.prototype = new Vehicle(true,true); //prototypal inheritance
+//here Car is like an instance of Vehicle
+Car.prototype.showSpecs = displaySpecs;
+//showSpecs is acting like alias for displaySpecs
+var myPhantom = new Car("rolls Royce", "Ghost",575);
+myPhantom.showSpecs();
+
+Vehicle.prototype.hasTrunk = true;
+alert(myPhantom.hasTrunk);
+ }
+                
+
+
+
+
+
+
+
+
+
+
+
+                //init();
+
+                var getVal,incremental,setVal;
+                function emit420(){
+
+                var num = 419;
+
+                emitval = function(){alert(num)}
+                incrementVal = function(){num++;}
+                setVal =function(tmpNum){ num= tmpNum}
+                }
+                //emit420();
+                //getVal();
+                //incrementVal();
+                //getVal();
+                //setVal(100);
+                //getVal();
+
+
+
+
+                var newWin;
+                function openWin(){
+                    newWin=window.open("https://www.lumen.com"," ",'top="1090" height=20 left=200 right=100 width=15');
+                    newWin.document.open();
+                    newWin.document.write("hii");
+                    newWin.document.write("<h1>wecome to lumen</h1>");
+                    //newWin.document.close();
+                    //newWin.document.cookie="username=value;expires="
+                    document.links[0].href='http://www.duckduckgo.com';
+                    document.forms[0].submit();
+                    document.forms[0].reset();
+
+                    function checkForm(){
+                        if(document.forms[0].elements[0].value==""){
+                        alert("please fill the field");
+                        document.forms[0].elements[0].focus();
+                    }
+                    else{
+                        alert("fom is submited");
+                    }
+                    }
+                    
+                }
+                function closeWin(){
+                    newWin=window.close();
+                }
+                function delaydopenwin(){
+                    tmr=window.setTimeout(openWin,3000);
+                }
+                //clearTimeout(tmr)
+                function delaydopenwin(){
+                    window.setInterval(function(){
+                        var dt=new Date();
+                        console.log(dt.getTime());
+                    },1000);
+                }
+
+                function Shape(){
+                    this.type="shape";
+                    this.getType=function(){
+                        return this.type;
+                    }
+                }
+                
+
+                
+
+
+
+            
+                
+        </script>
+    </head>
+    <body >
+        <a href="http://google.com">Search</a>
+        <form>
+            <input type="text" name="txt" id="txt" value=""><br>
+            <input  type="button" name="btn1" id="btn1" value="form" onclick="checkForm()">
+            <input  type="button" name="btn1" id="btn1" value="close window" onclick="closeWin()">
+            <input  type="button" name="btn1" id="btn1" value="delay open window" onclick="delaydopenwin()">
+            
+   
+   
+        </form>
+
+        <h1>my first web page</h1>
+    </body>
+</html>

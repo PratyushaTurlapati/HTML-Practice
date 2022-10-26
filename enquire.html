@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <h1 align="center"> Tour Booking</h1>
+        <style>
+        
+    
+            body{
+                text-align: justify;
+                align-content: justify;
+                background-color: aquamarine;
+                size: 1000*1000;
+                position: absolute;
+                top: 100px;
+                left: 400px;
+                font-style: italic;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+            }
+            select{
+                size: 200*200;
+            }
+        </style>
+    </head>
+    <body align="center">
+        <form name="book" method="get" class="A" >
+            Enter your Name:<br><input type="text" id="name" size="55" value="name" >
+            <br>
+            <br>
+            Enter your ContactNo:<br><input type="tel" id="phno" size="55" value="phno">
+            <br>
+            Enter your Mailid:<br><input type="email" id="mail" size="55" value="mail">
+            <br>
+            Select your tour plan:
+            <br>
+            <select name="seltour">
+                <option value="LOCAL CITY TOUR">LOCAL CITY TOUR</option>
+                <option value="Inter-city plan">INTER CITY TOUR</option>
+                <option value="Spiritual plan">SPIRITUAL TOUR</option>
+                <option value="Budget tour plan"> BUDGET TOUR</option>
+                </select>
+            <br>
+            Describe your tour plan:
+            <br>
+            <textarea name="description" id="desc" rows="5" cols="25"></textarea>
+            <br>
+            <br>
+            <button type="submit" >submit</button>
+        </form>
+        <a href="transport.html" align="right"><img src="back.jfif" width="20" height="20" ></a>
+    </body>
+</html>

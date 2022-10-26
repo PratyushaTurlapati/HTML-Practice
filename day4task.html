@@ -1,0 +1,69 @@
+<html>
+    <head>
+        Day4 Task
+    </head>
+    <body>
+        <script>
+            function Shape(type)
+            {
+            this.type=type;
+            this.getType=function getType(){
+                return this.type;
+            }
+            }
+
+            function Triangle(a,b,c){
+                //this.type="Triangle"
+                this.a=a;
+                this.b=b;
+                this.c=c;
+                this.getPerimeter = function(){
+                    return(this.a+this.b+this.c);
+                }
+            }
+            function Circle(r){
+                this.r=r;
+                this.getArea=function(){
+                    return(3.14*r*r);
+                }
+                this.getCircumference=function(){
+                    return(2*3.14*r);
+                }
+            }
+            function Rectangle(l,w){
+                this.l=l;
+                this.w=w;
+                this.getArea=function(){
+                    return(l*b);
+                }
+            }
+
+            function init(){
+            //var Shape=new Shape();
+            Triangle.prototype=new Shape('Triangle');
+            Circle.prototype=new Shape('Circle');
+            Rectangle.prototype=new Shape('Rectangle');
+
+
+            var t= new Triangle(1,2,3);
+            alert(t.getPerimeter());
+            alert(t.getType());
+
+            var u= new Circle(3);
+            alert(u.getArea());
+            alert(u.getCircumference());
+
+            var v= new Rectangle(3,4);
+            alert(v.getArea());
+        }
+
+            //<input  type="button" name="btn1" id="btn1" value="perimeter" onclick="t.getPerimeter()"></input>
+            //<input  type="button" name="btn1" id="btn1" value="type" onclick="t.getType()"></input>
+
+        </script>
+        <form action="">
+            <input  type="button" name="btn1" id="btn1" value="perimeter" onclick="init()"></input>
+
+        </form>
+    </body>
+</html> 

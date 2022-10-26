@@ -1,0 +1,61 @@
+<script lang="text/javascript" src="pratyu1.js"></script>
+<link rel="stylesheet"href="ex1.css">
+<body class="bg">
+    
+            <div id="header2" class="part2">
+            <div >
+                <div>
+                    <fieldset>
+                    <legend border:"1px"><b>ORDERS</b></legend>
+                    
+                    <b>Product Code</b>
+                    <br>
+                    <input type="text" name="productCode" id="productCode">
+                    <br>
+                    <br>
+                    <b>Quantity</b>
+                    <br>
+                    <input type="number" min="1" id="inputQuantity" value="1">
+                    <br>
+                    <br>
+                    <input type="button" onclick="addCart()" value="Add Product">
+                </fieldset>
+                </div>
+                
+            </div>
+        </div>
+        
+        <div id="billSection" class="a">
+            <fieldset>
+                <legend border:"1px">List Of Items</legend>
+            <table id="billTable" rules="all" border="1px">
+                <thead>
+                    <tr style="background-color:beige; border-color:white;border:3px">
+                        <!-- <td>&nbsp;SNo</td> -->
+                        <td>&nbsp;Sno</td>
+                        <td>&nbsp;Product Name</td>
+                        <td>&nbsp;Price</td>
+                        <td>&nbsp;Taxes</td>
+                        <td>&nbsp;Units</td>
+                        <td>&nbsp;Total</td>
+                         <td>Total</td>
+                    </tr>
+                </thead>
+                <tbody id="tbody"style="color:blue;border-color:white;border:3px">
+
+                </tbody>
+            </table>
+        </fieldset>
+        <br>
+        </div>
+            <div class="B">
+                <fieldset>
+                    <legend><p>Bill</p></legend>
+                            <p>Total Bill Amount:</p>
+                        <input type="number" id="subtotal" value="0">
+                    <input type="submit" class="t" value="Generate Bill"  onclick="GenerateBill()" id="Bill" >
+                </fieldset>
+                
+            </div>
+</body>
+</html>
